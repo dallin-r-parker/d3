@@ -43,6 +43,18 @@ let p = d3.select('body')
     .text(d => (d));
 
 p.enter().append('p')
-    .text(d => (d));
+    .text(d => (d))
+    .style('color', 'white');
 
 p.exit().remove()
+
+// TRANSITIONS ==============================
+d3.select('body').transition()
+    .duration(1000)
+    .delay((d, i) => (i * 10))
+    .style('background-color', 'black')
+
+d3.selectAll('circle').transition()
+    .duration(750)
+    .delay((d, i) => (i * 10))
+    .attr('r', d => (Math.sqrt(d * scale)));
