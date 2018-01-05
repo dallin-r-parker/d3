@@ -6,12 +6,12 @@ d3.selectAll('p')
 
     // Selection examples
 
-d3.select('#foo')    
-// selects the element with an id="foo" attribute 
-d3.selectAll('.primary') 
-// selects all elements with CSS class primary 
-d3.selectAll('div')   
-// select all divs on the page 
+d3.select('#foo')
+// selects the element with an id="foo" attribute
+d3.selectAll('.primary')
+// selects all elements with CSS class primary
+d3.selectAll('div')
+// select all divs on the page
 
 
     //Scales examples
@@ -54,7 +54,14 @@ d3.select('body').transition()
     .delay((d, i) => (i * 10))
     .style('background-color', 'black')
 
-d3.selectAll('circle').transition()
-    .duration(750)
-    .delay((d, i) => (i * 10))
-    .attr('r', d => (Math.sqrt(d * scale)));
+// d3.selectAll('circle').transition()
+//     .duration(750)
+//     .delay((d, i) => (i * 10))
+//     .attr('r', d => (Math.sqrt(d * scale)));
+    //todo: need to fix scale not being defined
+
+
+// DAY TWO ====================================
+const foo = d3.select('#foo').transition()
+.duration(1500)
+.style('background', 'green')
