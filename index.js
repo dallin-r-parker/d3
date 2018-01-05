@@ -62,6 +62,9 @@ d3.select('body').transition()
 
 
 // DAY TWO ====================================
-const foo = d3.select('#foo').transition()
+d3.select('#foo')
+.data([100, 90, 80, 70, 60, 50])
+.transition()
 .duration(1500)
+.delay((d, i) => console.log(d))
 .style('background', 'green')
